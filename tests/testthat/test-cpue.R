@@ -55,3 +55,9 @@ test_that("cpue errors when input is not numeric", {
     error = TRUE
   )
 })
+
+test_that("cpue warns if catch and effort lengths differ", {
+  expect_snapshot(cpue(c(100, 200, 300), c(10, 20)))
+
+  expect_no_warning(cpue(c(100, 200), c(10, 20)))
+})
