@@ -8,7 +8,8 @@
 [![R-CMD-check](https://github.com/ricardd/fishr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ricardd/fishr/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The goal of fishr is to …
+The goal of fishr is to implement a phony R package as part of a
+training program offered by Andy and Sam through TESA.
 
 ## Installation
 
