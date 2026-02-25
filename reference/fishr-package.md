@@ -9,6 +9,8 @@ Useful links:
 
 - <https://github.com/ricardd/fishr>
 
+- <https://ricardd.github.io/fishr/>
+
 - Report bugs at <https://github.com/ricardd/fishr/issues>
 
 ## Author

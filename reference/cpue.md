@@ -5,7 +5,7 @@ Calculate catch per unit of effort (CPUE)
 ## Usage
 
 ``` r
-cpue(catch, effort, gear_factor = 1)
+cpue(catch, effort, gear_factor = 1, verbose = FALSE)
 ```
 
 ## Arguments
@@ -21,6 +21,10 @@ cpue(catch, effort, gear_factor = 1)
 - gear_factor:
 
   Numeric adjustment for fishing gear corrections
+
+- verbose:
+
+  Logical, if TRUE print processing info (default is FALSE)
 
 ## Value
 
