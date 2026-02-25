@@ -14,17 +14,22 @@ biomass_index(
 )
 }
 \arguments{
-\item{cpue}{Numeric vector of CPUE values}
+\item{cpue}{Numeric vector of CPUE values (units: kg/hr).}
 
-\item{area_swept}{Numeric vector of area swept (e.g., km^2)}
+\item{area_swept}{Numeric vector of area swept in \strong{km^2^}.}
 
-\item{catch}{catch value numeric}
+\item{catch}{Numeric vector of catch values}
 
-\item{effort}{effort value numeric}
+\item{effort}{Numeric vector of effort values}
 
 \item{verbose}{Logical, if TRUE print processing info (default is FALSE, also accepts the value of )}
 
-\item{...}{arguments passed to cpue function}
+\item{...}{
+  Arguments passed on to \code{\link[=cpue]{cpue}}
+  \describe{
+    \item{\code{gear_factor}}{Numeric adjustment for fishing gear corrections}
+    \item{\code{method}}{Character; one of "ratio" or "log"}
+  }}
 }
 \value{
 A  numeric vector of biomass index values
