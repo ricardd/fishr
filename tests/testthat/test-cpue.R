@@ -20,3 +20,25 @@ test_that("gear_factor scales correctly", {
     cpue(100, 10, 1)
   )
 })
+
+test_that("cpue handles missing data", {
+  expect_true(is.na(cpue(NA_real_, 10)))
+  expect_true(is.na(cpue(10, NA_real_)))
+})
+
+test_that("cpue works with generated data", {
+  data <- generate_fishing_data(5)
+
+  result <- cpue(data$catch, data$effort)
+
+  expect_equal(
+    result,
+    c(4.99, 266.79, 56.94, 23.1, 40.09),
+    tolerance = 0.1
+  )
+})
+
+test_that("cpue matches reference data", {
+  result <- cpue(reference_data$catch, reference_data$effort)
+  expect_equal(result, reference_data$expected_cpue)
+})
