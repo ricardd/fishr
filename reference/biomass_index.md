@@ -5,7 +5,14 @@ Calculate biomass index from CPUE and area swept
 ## Usage
 
 ``` r
-biomass_index(cpue = NULL, area_swept, catch = NULL, effort = NULL, ...)
+biomass_index(
+  cpue = NULL,
+  area_swept,
+  catch = NULL,
+  effort = NULL,
+  verbose = getOption("fishr.verbose", default = FALSE),
+  ...
+)
 ```
 
 ## Arguments
@@ -25,6 +32,11 @@ biomass_index(cpue = NULL, area_swept, catch = NULL, effort = NULL, ...)
 - effort:
 
   effort value numeric
+
+- verbose:
+
+  Logical, if TRUE print processing info (default is FALSE, also accepts
+  the value of )
 
 - ...:
 
