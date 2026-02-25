@@ -5,7 +5,13 @@ Calculate catch per unit of effort (CPUE)
 ## Usage
 
 ``` r
-cpue(catch, effort, gear_factor = 1, verbose = FALSE)
+cpue(
+  catch,
+  effort,
+  gear_factor = 1,
+  method = c("ratio", "log"),
+  verbose = getOption("fishr.verbose", default = FALSE)
+)
 ```
 
 ## Arguments
@@ -22,9 +28,14 @@ cpue(catch, effort, gear_factor = 1, verbose = FALSE)
 
   Numeric adjustment for fishing gear corrections
 
+- method:
+
+  Character; one of "ratio" or "log"
+
 - verbose:
 
-  Logical, if TRUE print processing info (default is FALSE)
+  Logical, if TRUE print processing info (default is FALSE, also accepts
+  the value of )
 
 ## Value
 

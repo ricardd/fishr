@@ -5,7 +5,7 @@ Calculate biomass index from CPUE and area swept
 ## Usage
 
 ``` r
-biomass_index(cpue, area_swept)
+biomass_index(cpue = NULL, area_swept, catch = NULL, effort = NULL, ...)
 ```
 
 ## Arguments
@@ -17,6 +17,18 @@ biomass_index(cpue, area_swept)
 - area_swept:
 
   Numeric vector of area swept (e.g., km^2)
+
+- catch:
+
+  catch value numeric
+
+- effort:
+
+  effort value numeric
+
+- ...:
+
+  arguments passed to cpue function
 
 ## Value
 
