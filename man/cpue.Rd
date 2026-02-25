@@ -8,6 +8,7 @@ cpue(
   catch,
   effort,
   gear_factor = 1,
+  method = c("ratio", "log"),
   verbose = getOption("fishr.verbose", default = FALSE)
 )
 }
@@ -17,6 +18,8 @@ cpue(
 \item{effort}{Numeric vector of effort values}
 
 \item{gear_factor}{Numeric adjustment for fishing gear corrections}
+
+\item{method}{Character; one of "ratio" or "log"}
 
 \item{verbose}{Logical, if TRUE print processing info (default is FALSE, also accepts the value of )}
 }
