@@ -7,6 +7,7 @@
 #' @param catch catch value numeric
 #' @param effort effort value numeric
 #' @param ... arguments passed to cpue function
+#' @param verbose Logical, if TRUE print processing info (default is FALSE, also accepts the value of )
 #'
 #' @returns A  numeric vector of biomass index values
 #' @export
@@ -19,12 +20,23 @@ biomass_index <- function(
   area_swept,
   catch = NULL,
   effort = NULL,
+  verbose = getOption("fishr.verbose", default = FALSE),
   ...
 ) {
   rlang::check_dots_used()
 
   if (is.null(cpue) && (!is.null(catch) && !is.null(effort))) {
-    cpue <- cpue(catch, effort, ...)
+    cpue <- cpue(catch, effort, verbose = verbose, ...)
+  }
+
+  if (is.null(cpue)) {
+    stop("Must provide either 'cpue' or both 'catch' and 'effort'.")
+  }
+
+  validate_numeric_inputs(cpue = cpue, area_swept = area_swept)
+
+  if (verbose) {
+    message("calculating biomass index for ", length(area_swept), " records")
   }
 
   cpue * area_swept

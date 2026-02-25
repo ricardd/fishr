@@ -1,7 +1,7 @@
 #
 
 generate_fishing_data <- function(n = 10) {
-  set.seed(1234)
+  withr::local_seed(1234)
 
   data.frame(
     catch = runif(n, 10, 500),
