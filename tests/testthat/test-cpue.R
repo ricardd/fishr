@@ -20,3 +20,44 @@ test_that("gear_factor scales correctly", {
     cpue(100, 10, 1)
   )
 })
+
+test_that("cpue handles missing data", {
+  expect_true(is.na(cpue(NA_real_, 10)))
+  expect_true(is.na(cpue(10, NA_real_)))
+})
+
+test_that("cpue works with generated data", {
+  data <- generate_fishing_data(5)
+
+  result <- cpue(data$catch, data$effort)
+
+  expect_equal(
+    result,
+    c(4.99, 266.79, 56.94, 23.1, 40.09),
+    tolerance = 0.1
+  )
+})
+
+test_that("cpue matches reference data", {
+  result <- cpue(reference_data$catch, reference_data$effort)
+  expect_equal(result, reference_data$expected_cpue)
+})
+
+test_that("cpue verbose returns a message", {
+  expect_message(cpue(c(100, 200), c(2, 5), verbose = TRUE))
+  expect_no_message(cpue(c(100, 200), c(2, 5)))
+})
+
+## snapshot test
+test_that("cpue errors when input is not numeric", {
+  expect_snapshot(
+    cpue("five", 10),
+    error = TRUE
+  )
+})
+
+test_that("cpue warns if catch and effort lengths differ", {
+  expect_snapshot(cpue(c(100, 200, 300), c(10, 20)))
+
+  expect_no_warning(cpue(c(100, 200), c(10, 20)))
+})

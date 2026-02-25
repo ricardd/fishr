@@ -4,7 +4,7 @@
 \alias{cpue}
 \title{Calculate catch per unit of effort (CPUE)}
 \usage{
-cpue(catch, effort, gear_factor = 1)
+cpue(catch, effort, gear_factor = 1, verbose = FALSE)
 }
 \arguments{
 \item{catch}{Numeric vector of catch values}
@@ -12,6 +12,8 @@ cpue(catch, effort, gear_factor = 1)
 \item{effort}{Numeric vector of effort values}
 
 \item{gear_factor}{Numeric adjustment for fishing gear corrections}
+
+\item{verbose}{Logical, if TRUE print processing info (default is FALSE)}
 }
 \value{
 A numeric vector of CPUE values
