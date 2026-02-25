@@ -12,6 +12,7 @@ An example package developed during a TESA-led training on advanced R package de
 Useful links:
 \itemize{
   \item \url{https://github.com/ricardd/fishr}
+  \item \url{https://ricardd.github.io/fishr/}
   \item Report bugs at \url{https://github.com/ricardd/fishr/issues}
 }
 
