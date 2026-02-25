@@ -7,6 +7,7 @@
 #' @param catch catch value numeric
 #' @param effort effort value numeric
 #' @param ... arguments passed to cpue function
+#' @param verbose Logical, if TRUE print processing info (default is FALSE, also accepts the value of )
 #'
 #' @returns A  numeric vector of biomass index values
 #' @export
