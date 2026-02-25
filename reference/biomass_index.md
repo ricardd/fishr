@@ -19,19 +19,19 @@ biomass_index(
 
 - cpue:
 
-  Numeric vector of CPUE values
+  Numeric vector of CPUE values (units: kg/hr).
 
 - area_swept:
 
-  Numeric vector of area swept (e.g., km^2)
+  Numeric vector of area swept in **km^2^**.
 
 - catch:
 
-  catch value numeric
+  Numeric vector of catch values
 
 - effort:
 
-  effort value numeric
+  Numeric vector of effort values
 
 - verbose:
 
@@ -40,7 +40,16 @@ biomass_index(
 
 - ...:
 
-  arguments passed to cpue function
+  Arguments passed on to
+  [`cpue`](https://ricardd.github.io/fishr/reference/cpue.md)
+
+  `gear_factor`
+
+  :   Numeric adjustment for fishing gear corrections
+
+  `method`
+
+  :   Character; one of "ratio" or "log"
 
 ## Value
 

@@ -53,19 +53,19 @@
 
 
 <dl><dt id="arg-cpue">cpue<a class="anchor" aria-label="anchor" href="#arg-cpue"></a></dt>
-<dd><p>Numeric vector of CPUE values</p></dd>
+<dd><p>Numeric vector of CPUE values (units: kg/hr).</p></dd>
 
 
 <dt id="arg-area-swept">area_swept<a class="anchor" aria-label="anchor" href="#arg-area-swept"></a></dt>
-<dd><p>Numeric vector of area swept (e.g., km^2)</p></dd>
+<dd><p>Numeric vector of area swept in <strong>km^2^</strong>.</p></dd>
 
 
 <dt id="arg-catch">catch<a class="anchor" aria-label="anchor" href="#arg-catch"></a></dt>
-<dd><p>catch value numeric</p></dd>
+<dd><p>Numeric vector of catch values</p></dd>
 
 
 <dt id="arg-effort">effort<a class="anchor" aria-label="anchor" href="#arg-effort"></a></dt>
-<dd><p>effort value numeric</p></dd>
+<dd><p>Numeric vector of effort values</p></dd>
 
 
 <dt id="arg-verbose">verbose<a class="anchor" aria-label="anchor" href="#arg-verbose"></a></dt>
@@ -73,7 +73,14 @@
 
 
 <dt id="arg--">...<a class="anchor" aria-label="anchor" href="#arg--"></a></dt>
-<dd><p>arguments passed to cpue function</p></dd>
+<dd><p>Arguments passed on to <code><a href="cpue.html">cpue</a></code></p><dl><dt><code>gear_factor</code></dt>
+<dd><p>Numeric adjustment for fishing gear corrections</p></dd>
+
+    <dt><code>method</code></dt>
+<dd><p>Character; one of "ratio" or "log"</p></dd>
+
+
+</dl></dd>
 
 </dl></div>
     <div class="section level2">
