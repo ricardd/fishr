@@ -1,0 +1,35 @@
+# fishr
+
+The goal of fishr is to implement a phony R package as part of a
+training program offered by Andy and Sam through TESA.
+
+## Installation
+
+You can install the development version of fishr from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("pak")
+pak::pak("ricardd/fishr")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+``` r
+library(fishr)
+## basic example code
+cpue(100,50)
+#> [1] 2
+```
+
+# Package index
+
+## All functions
+
+- [`biomass_index()`](https://ricardd.github.io/fishr/reference/biomass_index.md)
+  : Calculate biomass index
+- [`cpue()`](https://ricardd.github.io/fishr/reference/cpue.md) :
+  Calculate catch per unit of effort (CPUE)
+
