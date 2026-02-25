@@ -3,6 +3,7 @@
 #' @param catch Numeric vector of catch values
 #' @param effort Numeric vector of effort values
 #' @param gear_factor Numeric adjustment for fishing gear corrections
+#' @param verbose Logical, if TRUE print processing info (default is FALSE)
 #'
 #' @returns A numeric vector of CPUE values
 #' @export

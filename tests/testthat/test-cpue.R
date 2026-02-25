@@ -44,9 +44,14 @@ test_that("cpue matches reference data", {
 })
 
 test_that("cpue verbose returns a message", {
-  expect_message(cpue(
-    reference_data$catch,
-    reference_data$effort,
-    verbose = TRUE
-  ))
+  expect_message(cpue(c(100, 200), c(2, 5), verbose = TRUE))
+  expect_no_message(cpue(c(100, 200), c(2, 5)))
+})
+
+## snapshot test
+test_that("cpue errors when input is not numeric", {
+  expect_snapshot(
+    cpue("five", 10),
+    error = TRUE
+  )
 })
